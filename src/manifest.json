@@ -1,0 +1,19 @@
+{
+	"manifest_version": 2,
+	"name": "Make America Penises Again",
+	"permissions":["storage","contextMenus"],
+	"version": "1.0",
+	"description": "Mouse over photos tagged with our fearless leader to invite him to the party in all of our pants",
+	"icons":{"32":"images/icon-32.png","48":"images/icon-48.png","128":"images/icon-128.png"},
+	"content_scripts": 
+	[
+		{
+			"matches": ["*://*/*"],
+			"js": ["js/content_script.js"],
+			"css":["css/style.css"],
+			"run_at": "document_end"
+		}
+	],
+	"web_accessible_resources":["images/sprite-2.png","images/sprite.png"]
+}
+
